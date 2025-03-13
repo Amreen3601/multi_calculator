@@ -18,20 +18,8 @@ class _AgeCalculatorState extends State<AgeCalculator> {
       initialDate: DateTime.now(),
       firstDate: DateTime(1900),
       lastDate: DateTime.now(),
-      builder: (context, child) {
-        return Theme(
-          data: ThemeData.dark().copyWith(
-            colorScheme: ColorScheme.light(
-              primary: Colors.blue.shade700,
-              onPrimary: Colors.white,
-              onSurface: Colors.white,
-            ),
-            dialogBackgroundColor: Colors.black.withOpacity(0.8),
-          ),
-          child: child!,
-        );
-      },
     );
+
     if (pickedDate != null) {
       setState(() {
         _selectedDate = pickedDate;
