@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:multi_calculator/screens/home_screen.dart';
+import 'package:multi_calculator/constants/utils/exports.dart';
 
 void main() {
   runApp(const MultiCalculatorApp());
@@ -10,19 +9,23 @@ class MultiCalculatorApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Multi Calculator',
-      theme: ThemeData(
-        brightness: Brightness.light,
-        primarySwatch: Colors.blue,
+    return MultiProvider(
+      providers: AppProviders.providers,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: ScreenRoutes.splash,
+        onGenerateRoute: ScreenRoutes.generateRoute,
+        title: 'Multi Calculator',
+        theme: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: Colors.blue,
+        ),
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          primarySwatch: Colors.blue,
+        ),
+        themeMode: ThemeMode.system,
       ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
-      ),
-      themeMode: ThemeMode.system,
-      home: const HomeScreen(),
     );
   }
 }
