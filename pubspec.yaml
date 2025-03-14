@@ -43,6 +43,12 @@ dev_dependencies:
   shared_preferences:
   provider:
   flutter_screenutil:
+  flutter_launcher_icons:
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.jpg"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
