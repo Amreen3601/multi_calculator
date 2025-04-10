@@ -1,11 +1,5 @@
-
-
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:multi_calculator/constants/utils/color.dart';
 import 'package:multi_calculator/constants/utils/exports.dart';
-import 'package:provider/provider.dart';
-import 'package:multi_calculator/constants/utils/extensions.dart';
 
 class AgeCalculator extends StatelessWidget {
   const AgeCalculator({Key? key}) : super(key: key);
